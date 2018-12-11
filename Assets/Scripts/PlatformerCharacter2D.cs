@@ -20,6 +20,14 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
+        // Player landed particle system
+        public Transform landedParticle;
+        // Player landed spawn point
+        public Transform landedSpawnPoint;
+
+        // Stores value of grounded from previous frame
+        private bool prevGrounded = false;
+
         private void Awake()
         {
             // Setting up references.
@@ -27,6 +35,7 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+            landedSpawnPoint = transform.Find("LandedSpawnPoint");
         }
 
 
@@ -42,6 +51,11 @@ namespace UnityStandardAssets._2D
                 if (colliders[i].gameObject != gameObject)
                     m_Grounded = true;
             }
+            if(prevGrounded != m_Grounded && m_Grounded) {
+                Transform clone = Instantiate(landedParticle, landedSpawnPoint.position, landedSpawnPoint.rotation) as Transform;
+                GameMaster.gm.Destroyer(clone.gameObject);
+            }
+            prevGrounded = m_Grounded;
             m_Anim.SetBool("Ground", m_Grounded);
 
             // Set the vertical animation
@@ -65,7 +79,6 @@ namespace UnityStandardAssets._2D
             m_Anim.SetBool("Crouch", crouch);
 
             //only control the player if grounded or airControl is turned on
-            Debug.Log("AM I AIR CONTROLLABLE: " + m_AirControl);
             if (m_Grounded || m_AirControl)
             {
                 // Reduce the speed if crouching by the crouchSpeed multiplier

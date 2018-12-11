@@ -72,11 +72,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: -1.59, z: 0}
+  m_LocalPosition: {x: -0.08, y: 4.269, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
   - {fileID: 400004}
+  - {fileID: 4452067484318178}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -125,9 +126,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
+  m_Offset: {x: 0, y: -0.1957277}
   serializedVersion: 2
-  m_Radius: 0.10502106
+  m_Radius: 0.10074878
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -136,11 +137,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ff0888d70080f2149aa5aa42ad28d38e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.024799854}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -151,7 +152,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3493052, y: 0.61229885}
+  m_Size: {x: 0.3493052, y: 0.56269914}
   m_EdgeRadius: 0
 --- !u!95 &9500000
 Animator:
@@ -194,12 +195,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MaxSpeed: 3
-  m_JumpForce: 700
+  m_JumpForce: 720
   m_CrouchSpeed: 0.25
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 257
+  landedParticle: {fileID: 4492032338259300, guid: 2974d8ef657086843881c9a9f27d63da,
+    type: 2}
+  landedSpawnPoint: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -232,9 +236,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1783731295
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: -790926023
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ad5c17baa3c3a6e4d8879c9d0ceb824e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -257,3 +261,31 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100002}
   m_IsPrefabAsset: 1
+--- !u!1 &1788047399827526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4452067484318178}
+  m_Layer: 10
+  m_Name: LandedSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4452067484318178
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1788047399827526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.316, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400002}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
