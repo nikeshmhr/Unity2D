@@ -28,6 +28,8 @@ namespace UnityStandardAssets._2D
         // Stores value of grounded from previous frame
         private bool prevGrounded = false;
 
+        private CameraEffects camEffects;
+
         private void Awake()
         {
             // Setting up references.
@@ -36,6 +38,7 @@ namespace UnityStandardAssets._2D
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
             landedSpawnPoint = transform.Find("LandedSpawnPoint");
+            camEffects = Camera.main.GetComponent<CameraEffects>();
         }
 
 
@@ -52,6 +55,8 @@ namespace UnityStandardAssets._2D
                     m_Grounded = true;
             }
             if(prevGrounded != m_Grounded && m_Grounded) {
+                // Add slight camera shake effect
+                camEffects.ShakeCamera(0.01f, 0.01f);
                 Transform clone = Instantiate(landedParticle, landedSpawnPoint.position, landedSpawnPoint.rotation) as Transform;
                 GameMaster.gm.Destroyer(clone.gameObject);
             }
