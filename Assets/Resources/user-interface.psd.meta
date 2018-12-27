@@ -1,11 +1,15 @@
 fileFormatVersion: 2
-guid: fdebaf1ddb187bb419b4a59ac685692c
+guid: e578e1f18afab654fb0f9f1cea70e5c6
 TextureImporter:
   fileIDToRecycleName:
-    21300000: plank-sprites_0
-    21300002: plank-sprites_1
-    21300004: plank-sprites_2
-    21300006: plank-sprites_3
+    21300000: restart-opaque
+    21300002: restart-transparent
+    21300004: user-interface_2
+    21300006: user-interface_3
+    21300008: pause-opaque
+    21300010: pause-transparent
+    21300012: play-opaque
+    21300014: play-transparent
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -49,7 +53,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -88,13 +92,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plank-sprites_0
+      name: restart-opaque
       rect:
         serializedVersion: 2
-        x: 20
-        y: 28
-        width: 168
-        height: 45
+        x: 115
+        y: 2442
+        width: 955
+        height: 837
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,67 +106,147 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37380daa2eb06f643bb9e02826cdff4f
+      spriteID: 4dce27f5e306e7c4b8d42367e1a1d51d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plank-sprites_1
+      name: restart-transparent
       rect:
         serializedVersion: 2
-        x: 249
-        y: 27
-        width: 45
-        height: 39
+        x: 1356
+        y: 2443
+        width: 958
+        height: 835
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83c9ecd0846598547a8fc4a0b9dddfe8
+      spriteID: 1127c3410e415fa48b40bf3e90b3e1f3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plank-sprites_2
+      name: user-interface_2
       rect:
         serializedVersion: 2
-        x: 307
-        y: 27
-        width: 45
-        height: 39
+        x: 928
+        y: 2193
+        width: 17
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16f1d676087915543a9aaf152e505756
+      spriteID: 4e3ea79ae9fba944d80e647abda111bf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plank-sprites_3
+      name: user-interface_3
       rect:
         serializedVersion: 2
-        x: 395
-        y: 28
-        width: 168
-        height: 45
+        x: 2170
+        y: 2194
+        width: 16
+        height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0032566a475d14649875a8a90d63aea6
+      spriteID: efd5f4aec21d03643bb2222f4780da1c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause-opaque
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1377
+        width: 738
+        height: 802
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a59c614799da54f95fd070ec26dc27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause-transparent
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 1383
+        width: 738
+        height: 802
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216fd0bab40b0dd4180e017c23b689ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: play-opaque
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 191
+        width: 840
+        height: 833
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072ffee514b57cd42b6da0a3a0d5a142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: play-transparent
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 191
+        width: 838
+        height: 833
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fbc7bc7b882e4840853dfb2e0c29572
       vertices: []
       indices: 
       edges: []
@@ -170,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 109f9b9d672f67543a3b328f21992255
+    spriteID: 6efa4500fcd5ce8418cb856dacb6dc6d
     vertices: []
     indices: 
     edges: []

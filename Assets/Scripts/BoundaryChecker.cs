@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BoundaryChecker : MonoBehaviour {
 
@@ -24,8 +25,22 @@ public class BoundaryChecker : MonoBehaviour {
             if(p == null) {
                 Debug.Log("Player component not found.");
             }
+            Player.PlaySound(Player.SoundType.DEATH);
             cameraEffects.ShakeCamera(p.shakeAmount, p.shakeLength);
+
+            // Updates score
+            ScoreManager.sm.PlayerDied();
+
+            StartCoroutine(WaitAndReloadScene());
         }
-        Destroy(collision.gameObject);
+        Destroy(collision.gameObject, 0.5f);
+    }
+
+    private IEnumerator WaitAndReloadScene() {
+        // Pause spawner
+        // TODO: THIS IS TEMPORARY. Restart scene
+        // TODO: Display a scene with Restart and Exit button
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

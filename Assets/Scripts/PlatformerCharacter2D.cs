@@ -30,6 +30,8 @@ namespace UnityStandardAssets._2D
 
         private CameraEffects camEffects;
 
+        private AudioSource audioSource;
+
         private void Awake()
         {
             // Setting up references.
@@ -39,6 +41,7 @@ namespace UnityStandardAssets._2D
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
             landedSpawnPoint = transform.Find("LandedSpawnPoint");
             camEffects = Camera.main.GetComponent<CameraEffects>();
+            audioSource = GetComponent<AudioSource>();
         }
 
 
@@ -59,6 +62,9 @@ namespace UnityStandardAssets._2D
                 camEffects.ShakeCamera(0.01f, 0.01f);
                 Transform clone = Instantiate(landedParticle, landedSpawnPoint.position, landedSpawnPoint.rotation) as Transform;
                 GameMaster.gm.Destroyer(clone.gameObject);
+                if(!audioSource.isPlaying) {
+                    Player.PlaySound(Player.SoundType.LAND);
+                }
             }
             prevGrounded = m_Grounded;
             m_Anim.SetBool("Ground", m_Grounded);

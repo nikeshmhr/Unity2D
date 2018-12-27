@@ -1,11 +1,8 @@
 fileFormatVersion: 2
-guid: fdebaf1ddb187bb419b4a59ac685692c
+guid: 54366bfa8b6f1a64f86d1fd353f51647
 TextureImporter:
   fileIDToRecycleName:
-    21300000: plank-sprites_0
-    21300002: plank-sprites_1
-    21300004: plank-sprites_2
-    21300006: plank-sprites_3
+    21300000: Simple Head_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -35,7 +32,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -88,33 +85,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plank-sprites_0
+      name: Simple Head_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 28
-        width: 168
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37380daa2eb06f643bb9e02826cdff4f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: plank-sprites_1
-      rect:
-        serializedVersion: 2
-        x: 249
-        y: 27
-        width: 45
-        height: 39
+        x: 334
+        y: 328
+        width: 183
+        height: 183
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,47 +99,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83c9ecd0846598547a8fc4a0b9dddfe8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: plank-sprites_2
-      rect:
-        serializedVersion: 2
-        x: 307
-        y: 27
-        width: 45
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16f1d676087915543a9aaf152e505756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: plank-sprites_3
-      rect:
-        serializedVersion: 2
-        x: 395
-        y: 28
-        width: 168
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0032566a475d14649875a8a90d63aea6
+      spriteID: 19f780f4b2fabcd4da780ebabd51e163
       vertices: []
       indices: 
       edges: []
@@ -170,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 109f9b9d672f67543a3b328f21992255
+    spriteID: 00a4c62f8a0fbf94a952b77e6e7e5b7d
     vertices: []
     indices: 
     edges: []
