@@ -10,6 +10,7 @@ TextureImporter:
     21300010: pause-transparent
     21300012: play-opaque
     21300014: play-transparent
+    21300016: close-app
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -175,8 +176,8 @@ TextureImporter:
       name: pause-opaque
       rect:
         serializedVersion: 2
-        x: 303
-        y: 1377
+        x: 292
+        y: 1570
         width: 738
         height: 802
       alignment: 0
@@ -195,8 +196,8 @@ TextureImporter:
       name: pause-transparent
       rect:
         serializedVersion: 2
-        x: 1543
-        y: 1383
+        x: 1532
+        y: 1593
         width: 738
         height: 802
       alignment: 0
@@ -247,6 +248,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8fbc7bc7b882e4840853dfb2e0c29572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: close-app
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 1088
+        width: 597
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed201b39d01d8ae438e5732742da0a1e
       vertices: []
       indices: 
       edges: []
