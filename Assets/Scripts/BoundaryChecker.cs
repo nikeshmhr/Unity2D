@@ -31,7 +31,10 @@ public class BoundaryChecker : MonoBehaviour {
             // Updates score
             ScoreManager.sm.PlayerDied();
 
-            StartCoroutine(WaitAndReloadScene());
+            MainMenu.isRestart = true;
+            SceneManager.LoadScene(0);
+
+            //StartCoroutine(WaitAndReloadScene());
         }
         Destroy(collision.gameObject, 0.5f);
     }
