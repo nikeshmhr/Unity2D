@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour {
 
     private Sprite playOpaque;
     private Sprite restartOpaque;
+    private AudioSource audioSource;
 
 
     private void Awake() {
@@ -38,14 +39,23 @@ public class MainMenu : MonoBehaviour {
         } else {
             mainMenu.playButton.GetComponent<Image>().sprite = mainMenu.playOpaque;
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void PlayRestartGame() {
+        StartCoroutine(WaitAndStartScene());
+    }
+
+    private IEnumerator WaitAndStartScene() {
+        audioSource.Play();
+        yield return new WaitForSeconds(0.9f);
         Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 
     public void QuitGame() {
+        audioSource.Play();
         Application.Quit();
     }
 }

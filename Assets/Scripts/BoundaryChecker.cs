@@ -31,19 +31,14 @@ public class BoundaryChecker : MonoBehaviour {
             // Updates score
             ScoreManager.sm.PlayerDied();
 
-            MainMenu.isRestart = true;
-            SceneManager.LoadScene(0);
-
-            //StartCoroutine(WaitAndReloadScene());
+            StartCoroutine(WaitAndReloadScene());
         }
         Destroy(collision.gameObject, 0.5f);
     }
 
     private IEnumerator WaitAndReloadScene() {
-        // Pause spawner
-        // TODO: THIS IS TEMPORARY. Restart scene
-        // TODO: Display a scene with Restart and Exit button
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        yield return new WaitForSeconds(1.5f);
+        MainMenu.isRestart = true;
+        SceneManager.LoadScene(0);
     }
 }

@@ -46,8 +46,8 @@
 * Work on broken plank mechanics (DONE)
 * Design UI (HUD) (DONE)
   * Add play/pause functionality (DONE)
-  * Play/Pause sound effects
-* Design Start Screen
+  * Play/Pause sound effects (DONE)
+* Design Start Screen (WIP/DONE)
 * Add Scoring system / Save HighScore (DONE)
 * HIGHSCORE SET:
   * Slow down timescale for few milliseconds
